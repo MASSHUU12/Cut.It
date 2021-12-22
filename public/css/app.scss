@@ -1,35 +1,182 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap");
 @import "./definitions.scss";
 
 * {
     margin: 0;
     font-family: "Poppins", sans-serif;
+    //font-family: 'Oooh Baby', cursive;
     font-weight: $fw-s;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
+header {
+    height: 15vh;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: $color-main;
 
-    form {
-        input[type="text"] {
-            border: 2px solid $color-white;
-            border-radius: $p-xs;
-            background-color: $color-fourth;
+    a {
+        text-decoration: none;
+        font-size: $fs-b;
+        font-weight: $fw-xs;
+        color: $color-white;
+        font-family: "Oooh Baby", cursive;
+        padding: 0 0 0 $p-xxxb;
+    }
+
+    a:hover {
+        color: $color-second;
+    }
+}
+
+body {
+    background-color: $color-main;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-fourth;
+    color: $color-white;
+    padding: $p-m 0;
+
+    .footer-left,
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-weight: $fw-m;
+            font-size: $fs-m;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-white;
+            font-size: $fs-r;
+            font-weight: $fw-r;
+        }
+
+        a:hover {
             color: $color-second;
+        }
+
+        p {
+            font-weight: $fw-m;
+            font-size: $fs-r;
+        }
+
+        p:last-child {
+            font-weight: $fw-r;
+        }
+    }
+
+    .footer-right {
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* home */
+.home-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+    padding: $p-xxxb 0 0 0;
+
+    .home-desc {
+        text-align: center;
+        color: $color-white;
+
+        h1 {
+            font-family: "Oooh Baby", cursive;
+            font-size: $fs-xxxb;
+            padding: 0 0 $p-r;
+        }
+
+        p {
+            color: $color-second;
+            font-weight: $fw-m;
+            font-size: $fs-m;
+        }
+
+        p:last-child {
+            padding: 0 0 $p-b;
+        }
+    }
+
+    .home-form {
+        input[type="text"],
+        input[type="submit"] {
+            border: none;
+            border-radius: $p-xs;
+            background-color: $color-fifth;
+            color: $color-third;
+            padding: $p-xs $p-b $p-xs $p-r;
             font-size: $fs-r;
         }
 
         input[type="submit"] {
-            border: 2px solid $color-white;
-            border-radius: $p-xs;
+            padding: $p-xs $p-r;
+            margin: 0 0 0 $p-r;
             background-color: $color-fourth;
-            color: $color-second;
+            color: $color-white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: $color-alt;
+        }
+    }
+
+    .home-result {
+        background-color: $color-fourth;
+        border-radius: $p-xs;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin: $p-b 0 0 0;
+        padding: $p-xs $p-m;
+
+        p {
+            padding: 0 $p-s 0 0;
+        }
+
+        p,
+        svg {
+            color: $color-white;
+            font-size: $fs-r;
+        }
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    .home-info {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+        color: $color-white;
+        padding: 0 $p-xxxb $p-b;
+
+        h1 {
+            font-size: $fs-xb;
+        }
+
+        p {
             font-size: $fs-r;
         }
     }
 }
+/* end home */

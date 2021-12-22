@@ -17,7 +17,7 @@ class CreateShortenedTable extends Migration
             $table->id();
             $table->string("originalLink");
             $table->string("shortenedLink");
-            $table->timestamps();
+            $table->date("created_at");
         });
     }
 

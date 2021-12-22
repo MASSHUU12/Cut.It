@@ -16,7 +16,7 @@ class CreateShortenedLink extends Controller
             // and uploading it to database
             $s = hash('crc32', $url);
 
-            DB::insert('insert into shortened (originalLink, shortenedLink) values (?, ?)', [$url, $s]);
+            DB::insert('insert into shortened (originalLink, shortenedLink, created_at) values (?, ?, ?)', [$url, $s, now()]);
 
             return redirect('/')->with('status', 'Shortened successfully')->with('url', $_SERVER['HTTP_HOST'] . '/' . $s);
         } else
