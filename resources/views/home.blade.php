@@ -5,4 +5,6 @@
     <input type="text" name="url" placeholder="Type your URL..." />
     <input type="submit" name="submit" />
 </form>
+<p>{{ session("status") }}</p>
+<p>{{ session("url") }}</p>
 @endsection
