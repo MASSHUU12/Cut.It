@@ -62,15 +62,19 @@ footer .footer-right a:hover {
 }
 footer .footer-left p,
 footer .footer-right p {
-  font-weight: 500;
-  font-size: 22px;
-}
-footer .footer-left p:last-child,
-footer .footer-right p:last-child {
   font-weight: 400;
+  font-size: 22px;
 }
 footer .footer-right a {
   text-decoration: underline;
+}
+footer .footer-right .footer-lang {
+  display: flex;
+  flex-direction: row;
+  padding: 25px 0 0 0;
+}
+footer .footer-right .footer-lang a:last-child {
+  padding: 0 0 0 10px;
 }
 
 /* home */

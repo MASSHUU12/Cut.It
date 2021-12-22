@@ -2,8 +2,8 @@
 <div class="home-container">
     <div class="home-desc">
         <h1>Cut.It</h1>
-        <p>Most link shorteners do too much.</p>
-        <p>This one just makes your links shorter.</p>
+        <p>{{ __("Most link shorteners do too much.") }}</p>
+        <p>{{ __("This one just makes your links shorter.") }}</p>
     </div>
     <div class="home-form">
         <form action="/shorten" method="post">
@@ -11,7 +11,7 @@
             <input
                 type="text"
                 name="url"
-                placeholder="Type your link here..."
+                placeholder="{{ __('Type your link here') }}..."
                 maxlength="255"
                 required
             />
@@ -35,7 +35,7 @@
     @endif
 
     <div class="home-info">
-        <h1>How does it work?</h1>
+        <h1>{{ __("How does it work?") }}</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam non
             fuga quae, doloremque sit laudantium repudiandae laboriosam sint

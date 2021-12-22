@@ -15,26 +15,43 @@
 
         <footer>
             <div class="footer-left">
-                <h1>Useful links</h1>
+                <h1>{{ __("Useful links") }}</h1>
                 <a href="/">Home</a>
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/cookie">Cookie Policy</a>
+                <a href="/privacy">{{ __("Privacy Policy") }}</a>
+                <a href="/cookie">{{ __("Cookie Policy") }}</a>
             </div>
             <div class="footer-right">
-                <h1>Love what I do?</h1>
+                <h1>{{ __("Love what I do?") }}</h1>
                 <p>
-                    Please, consider buying me a
+                    {{ __("Please, consider buying me a") }}
                     <a
                         href="https://www.paypal.com/donate/?hosted_button_id=KWJ7PR5MACDJ8"
                         target="_blank"
                     >
-                        coffee.
+                        {{ __("coffee") }}
                     </a>
+                    .
                     <span
                         class="iconify"
                         data-icon="ant-design:coffee-outlined"
                     ></span>
                 </p>
+                <div class="footer-lang">
+                    <a href="/language/pl">
+                        <span
+                            class="iconify"
+                            data-icon="twemoji:flag-for-flag-poland"
+                            data-width="38"
+                        ></span>
+                    </a>
+                    <a href="/language/en">
+                        <span
+                            class="iconify"
+                            data-icon="twemoji:flag-for-flag-united-states"
+                            data-width="38"
+                        ></span>
+                    </a>
+                </div>
             </div>
         </footer>
 
@@ -45,6 +62,7 @@
         ></script>
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 
+        <script src="{{ asset('js/langDetection.js') }}"></script>
         @yield("scripts")
     </body>
 </html>

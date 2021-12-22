@@ -66,18 +66,24 @@ footer {
         }
 
         p {
-            font-weight: $fw-m;
-            font-size: $fs-r;
-        }
-
-        p:last-child {
             font-weight: $fw-r;
+            font-size: $fs-r;
         }
     }
 
     .footer-right {
         a {
             text-decoration: underline;
+        }
+
+        .footer-lang {
+            display: flex;
+            flex-direction: row;
+            padding: $p-m 0 0 0;
+
+            a:last-child {
+                padding: 0 0 0 $p-s;
+            }
         }
     }
 }
