@@ -83,7 +83,6 @@ footer .footer-right .footer-lang a:last-child {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  height: 75vh;
   padding: 200px 0 0 0;
 }
 .home-container .home-desc {
@@ -102,6 +101,9 @@ footer .footer-right .footer-lang a:last-child {
 }
 .home-container .home-desc p:last-child {
   padding: 0 0 35px;
+}
+.home-container .home-form {
+  margin: 0 0 200px;
 }
 .home-container .home-form input[type=text],
 .home-container .home-form input[type=submit] {
@@ -151,12 +153,16 @@ footer .footer-right .footer-lang a:last-child {
   flex-direction: column;
   color: #fff;
   padding: 0 200px 35px;
+  margin: 200px 0 0 0;
 }
 .home-container .home-info h1 {
   font-size: 48px;
+  font-weight: 500;
 }
 .home-container .home-info p {
   font-size: 22px;
+  color: #9f9fa7;
+  font-weight: 500;
 }
 
 /* end home *//*# sourceMappingURL=app.css.map */

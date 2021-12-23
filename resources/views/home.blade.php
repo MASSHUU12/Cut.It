@@ -37,10 +37,26 @@
     <div class="home-info">
         <h1>{{ __("How does it work?") }}</h1>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam non
-            fuga quae, doloremque sit laudantium repudiandae laboriosam sint
-            natus omnis, dolores molestiae libero! Error ut, possimus
-            consequuntur sunt qui libero?
+            {{
+                __(
+                    "For a link to be shortened, you must provide it in the correct form. The site accepts links like: https://example.com or example.com."
+                )
+            }}
+        </p>
+        <p>
+            {{
+                __(
+                    "When you click the Cut.It button, your link is saved in the database, and shortened. The shortened link will be deleted from our database if it is not used at least once during 30 days. The counter resets after each use of the link."
+                )
+            }}
+        </p>
+        <p>
+            {{
+                __(
+                    "Thanks to this solution our database will not be clogged with unused
+            links."
+                )
+            }}
         </p>
     </div>
 </div>

@@ -15,9 +15,10 @@ class CreateShortenedTable extends Migration
     {
         Schema::create('shortened', function (Blueprint $table) {
             $table->id();
-            $table->string("originalLink");
-            $table->string("shortenedLink");
+            $table->string("original_link");
+            $table->string("shortened_link");
             $table->date("created_at");
+            $table->date("last_used");
         });
     }
 

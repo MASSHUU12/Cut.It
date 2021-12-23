@@ -17,7 +17,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->call(function () {
-            DB::delete('delete from shortened where created_at <= adddate(now(),-30)');
+            DB::delete('delete from shortened where last_used <= adddate(now(),-30)');
         })->daily();
     }
 

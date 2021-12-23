@@ -94,7 +94,6 @@ footer {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 75vh;
     padding: $p-xxxb 0 0 0;
 
     .home-desc {
@@ -119,6 +118,8 @@ footer {
     }
 
     .home-form {
+        margin: 0 0 $p-xxxb;
+
         input[type="text"],
         input[type="submit"] {
             border: none;
@@ -175,13 +176,17 @@ footer {
         flex-direction: column;
         color: $color-white;
         padding: 0 $p-xxxb $p-b;
+        margin: $p-xxxb 0 0 0;
 
         h1 {
             font-size: $fs-xb;
+            font-weight: $fw-m;
         }
 
         p {
             font-size: $fs-r;
+            color: $color-second;
+            font-weight: $fw-m;
         }
     }
 }
