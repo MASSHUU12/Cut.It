@@ -191,3 +191,48 @@ footer {
     }
 }
 /* end home */
+
+/* privacy policy */
+.privacy-container,
+.cookie-policy-container {
+    height: 100%;
+    padding: $p-m $p-xxxb $p-b $p-xxxb;
+
+    h1,
+    h2,
+    h3 {
+        font-size: $fs-xxb;
+        font-weight: $fw-b;
+        color: $color-white;
+        padding: 0 0 $p-m;
+    }
+
+    h2 {
+        font-size: $fs-b;
+        padding: $p-m 0 $p-r;
+    }
+
+    h3 {
+        font-size: $fs-r;
+        padding: $p-m 0 $p-r;
+    }
+
+    p {
+        font-size: $fs-r;
+        font-weight: $fw-r;
+        color: $color-second;
+        padding: $p-s 0;
+    }
+
+    ul {
+        margin: $p-m 0;
+
+        li {
+            font-size: $fs-r;
+            color: $color-second;
+            padding: $p-s 0;
+            font-weight: $fw-r;
+        }
+    }
+}
+/* end privacy policy */

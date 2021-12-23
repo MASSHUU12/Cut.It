@@ -1,4 +1,4 @@
-@extends("master") @section("title") Home @endsection @section("content")
+@extends("master") @section("content")
 <div class="home-container">
     <div class="home-desc">
         <h1>Cut.It</h1>

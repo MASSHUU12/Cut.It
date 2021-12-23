@@ -23,12 +23,24 @@ Route::get('language/{locale}', function ($locale) {
     return redirect()->back();
 });
 
+
+// Home
 Route::get('/', function () {
     return view('home');
 });
 
-// route for URL processing and sending it to database
+// Privacy policy
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+
+// Cookie policy
+Route::get('/cookie', function () {
+    return view('cookie');
+});
+
+// Route for URL processing and sending it to database
 Route::post('/shorten', [CreateShortenedLink::class, "validateUrl"]);
 
-// redirect from shortened
+// Redirect from shortened
 Route::get('/{url}', [RedirectFromShortened::class, "redirectFromShortened"]);

@@ -165,4 +165,51 @@ footer .footer-right .footer-lang a:last-child {
   font-weight: 500;
 }
 
-/* end home *//*# sourceMappingURL=app.css.map */
+/* end home */
+/* privacy policy */
+.privacy-container,
+.cookie-policy-container {
+  height: 100%;
+  padding: 25px 200px 35px 200px;
+}
+.privacy-container h1,
+.privacy-container h2,
+.privacy-container h3,
+.cookie-policy-container h1,
+.cookie-policy-container h2,
+.cookie-policy-container h3 {
+  font-size: 58px;
+  font-weight: 700;
+  color: #fff;
+  padding: 0 0 25px;
+}
+.privacy-container h2,
+.cookie-policy-container h2 {
+  font-size: 32px;
+  padding: 25px 0 15px;
+}
+.privacy-container h3,
+.cookie-policy-container h3 {
+  font-size: 22px;
+  padding: 25px 0 15px;
+}
+.privacy-container p,
+.cookie-policy-container p {
+  font-size: 22px;
+  font-weight: 400;
+  color: #9f9fa7;
+  padding: 10px 0;
+}
+.privacy-container ul,
+.cookie-policy-container ul {
+  margin: 25px 0;
+}
+.privacy-container ul li,
+.cookie-policy-container ul li {
+  font-size: 22px;
+  color: #9f9fa7;
+  padding: 10px 0;
+  font-weight: 400;
+}
+
+/* end privacy policy *//*# sourceMappingURL=app.css.map */
