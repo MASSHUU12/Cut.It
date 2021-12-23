@@ -1,6 +1,6 @@
 @extends("master") @section("title") {{ __("Cookie Policy") }} @endsection
 @section("content")
-<div class="cookie-policy-container">
+<div class="cpolicy-container">
     <h1>{{ __("Cookie Policy") }}</h1>
     <h2>{{ __("Use of Cookies") }}</h2>
     <p>
