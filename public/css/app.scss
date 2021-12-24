@@ -341,6 +341,11 @@ footer {
         align-items: center;
         height: 100%;
 
+        svg {
+            padding: 0 0 0 $p-m;
+            transform: rotate(10deg);
+        }
+
         h2 {
             font-size: $fs-xxxb;
             font-weight: $fw-b;
