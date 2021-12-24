@@ -55,6 +55,21 @@
             </div>
         </footer>
 
+        <div class="c-consent" id="c-window">
+            <div class="c-icon">
+                <span
+                    class="iconify"
+                    data-icon="ci:cookie"
+                    data-width="128"
+                ></span>
+            </div>
+            <div class="c-content">
+                <h1>Cookies!</h1>
+                <p>Learn more <a href="/cookie">here</a>.</p>
+            </div>
+            <div class="c-btn" id="c-btn">OK</div>
+        </div>
+
         <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -63,6 +78,7 @@
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 
         <script src="{{ asset('js/langDetection.js') }}"></script>
+        <script src="{{ asset('js/cConsent.js') }}"></script>
         @yield("scripts")
     </body>
 </html>

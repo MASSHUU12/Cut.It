@@ -77,6 +77,57 @@ footer .footer-right .footer-lang a:last-child {
   padding: 0 0 0 10px;
 }
 
+/* custom */
+.c-consent {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  width: 350px;
+  background-color: #496f89;
+  border-radius: 10px;
+}
+.c-consent .c-icon {
+  color: #eeeeee;
+  padding: 15px 0 0 0;
+}
+.c-consent .c-content {
+  text-align: center;
+}
+.c-consent .c-content h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+}
+.c-consent .c-content p,
+.c-consent .c-content a {
+  color: #eeeeee;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.c-consent .c-content a {
+  font-weight: 700;
+}
+.c-consent .c-btn {
+  width: 100%;
+  text-align: center;
+  background-color: #5d8aa8;
+  border-radius: 0 0 10px 10px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+.c-consent .c-btn:hover {
+  background-color: #496f89;
+  cursor: pointer;
+}
+
+/* end custom */
 /* home */
 .home-container {
   display: flex;
