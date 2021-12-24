@@ -4,6 +4,15 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Most link shorteners do too much. This one just makes your links shorter."
+        />
+        <meta
+            name="og:title"
+            property="og:title"
+            content="Cut.It your link shortener"
+        />
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
         <title>Cut.It | @yield("title")</title>
     </head>
@@ -17,8 +26,8 @@
             <div class="footer-left">
                 <h1>{{ __("Useful links") }}</h1>
                 <a href="/">Home</a>
-                <a href="/privacy">{{ __("Privacy Policy") }}</a>
-                <a href="/cookie">{{ __("Cookie Policy") }}</a>
+                <a href="/privacy" rel="nofollow">{{ __("Privacy Policy") }}</a>
+                <a href="/cookie" rel="nofollow">{{ __("Cookie Policy") }}</a>
             </div>
             <div class="footer-right">
                 <h1>{{ __("Love what I do?") }}</h1>
@@ -37,14 +46,14 @@
                     ></span>
                 </p>
                 <div class="footer-lang">
-                    <a href="/language/pl">
+                    <a href="/language/pl" rel="nofollow">
                         <span
                             class="iconify"
                             data-icon="twemoji:flag-for-flag-poland"
                             data-width="38"
                         ></span>
                     </a>
-                    <a href="/language/en">
+                    <a href="/language/en" rel="nofollow">
                         <span
                             class="iconify"
                             data-icon="twemoji:flag-for-flag-united-states"
@@ -65,7 +74,7 @@
             </div>
             <div class="c-content">
                 <h1>Cookies!</h1>
-                <p>Learn more <a href="/cookie">here</a>.</p>
+                <p>Learn more <a href="/cookie" rel="nofollow">here</a>.</p>
             </div>
             <div class="c-btn" id="c-btn">OK</div>
         </div>
