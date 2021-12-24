@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>Error</h1>
-    </body>
-</html>
+@extends("master") @section("title") {{ __("Oh no!") }} @endsection
+@section("content")
+<div class="err-container">
+    <div class="err-left">
+        <h1>{{ __("This page has been abducted!") }}</h1>
+        <p>{{ __("Let's head back home and try that again.") }}</p>
+        <p>{{ __("The truth is out there...") }}</p>
+        <button><a href="/">Home</a></button>
+    </div>
+    <div class="err-right">
+        <span
+            class="iconify"
+            data-icon="mdi:ufo-outline"
+            data-width="256"
+        ></span>
+        <h2>404</h2>
+    </div>
+</div>
+@endsection

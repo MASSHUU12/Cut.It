@@ -263,4 +263,51 @@ footer .footer-right .footer-lang a:last-child {
   font-weight: 400;
 }
 
-/* end privacy policy *//*# sourceMappingURL=app.css.map */
+/* end privacy policy */
+/* 404 */
+.err-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  height: 85vh;
+}
+.err-container .err-left h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+.err-container .err-left p {
+  font-size: 28px;
+  color: #9f9fa7;
+}
+.err-container .err-left button {
+  background-color: #5d8aa8;
+  padding: 5px 25px;
+  border-radius: 10px;
+  border: none;
+  margin: 35px 0 0 0;
+  cursor: pointer;
+}
+.err-container .err-left button a {
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+}
+.err-container .err-left button:hover {
+  background-color: #496f89;
+}
+.err-container .err-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.err-container .err-right h2 {
+  font-size: 72px;
+  font-weight: 700;
+  color: #9f9fa7;
+  padding: 0 0 125px;
+}
+
+/* end 404 *//*# sourceMappingURL=app.css.map */
