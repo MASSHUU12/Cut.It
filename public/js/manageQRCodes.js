@@ -1,5 +1,5 @@
 $("#qr-show").click(() => {
-    $("#qr-qr").toggle();
+    $("#qr-qr").toggle(200);
 });
 
 $("#qr-qr").click(() => {
@@ -8,5 +8,3 @@ $("#qr-qr").click(() => {
     link.download = "qr-code";
     link.click();
 });
-
-// https://duckduckgo.com

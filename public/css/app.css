@@ -181,6 +181,10 @@ footer .footer-right .footer-lang a:last-child {
   color: #9f9fa7;
   padding: 10px 0 0;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .home-container .home-result #qr-show:hover {
   color: #454545;
