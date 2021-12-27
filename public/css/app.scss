@@ -176,8 +176,6 @@ footer {
     }
 
     .home-form {
-        margin: 0 0 $p-xxxb;
-
         input[type="text"],
         input[type="submit"] {
             border: none;
@@ -233,7 +231,7 @@ footer {
         align-items: flex-start;
         flex-direction: column;
         color: $color-white;
-        padding: 0 $p-xxxb $p-b;
+        padding: $p-xxxb $p-xxxb $p-b;
         margin: $p-xxxb 0 0 0;
 
         h1 {
@@ -251,7 +249,7 @@ footer {
 /* end home */
 
 /* privacy policy */
-.privacy-container,
+.ppolicy-container,
 .cpolicy-container {
     height: 100%;
     padding: $p-m $p-xxxb $p-b $p-xxxb;
@@ -355,3 +353,81 @@ footer {
     }
 }
 /* end 404 */
+
+/* mobile */
+@media (max-width: 854px) {
+    header {
+        a {
+            padding: 0 0 0 $p-b;
+        }
+    }
+
+    footer {
+        width: fit-content;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: $p-r $p-b;
+
+        .footer-left {
+            padding: 0 0 $p-r;
+        }
+    }
+
+    .c-consent {
+        height: 250px;
+        width: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: $p-b;
+    }
+
+    .home-container {
+        padding: $p-xb 0 0 0;
+
+        .home-desc {
+            p {
+                font-size: $fs-s;
+            }
+        }
+
+        .home-form {
+            margin: 0;
+            padding: 0 0 0 $p-b;
+
+            input[type="text"],
+            input[type="submit"] {
+                font-size: $fs-s;
+            }
+
+            input[type="text"] {
+                width: 50%;
+            }
+
+            input[type="submit"] {
+                padding: $p-xs;
+                margin: 0 0 0 $p-s;
+            }
+        }
+
+        .home-result {
+            padding: $p-xs 0;
+
+            p,
+            svg {
+                padding: 0 $p-s;
+                font-size: $fs-s;
+            }
+        }
+
+        .home-info {
+            height: fit-content;
+            padding: 0 $p-b $p-b;
+        }
+    }
+
+    .ppolicy-container,
+    .cpolicy-container {
+        padding: $p-r $p-b $p-m $p-b;
+    }
+}
+/* end mobile */

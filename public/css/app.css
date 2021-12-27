@@ -153,9 +153,6 @@ footer .footer-right .footer-lang a:last-child {
 .home-container .home-desc p:last-child {
   padding: 0 0 35px;
 }
-.home-container .home-form {
-  margin: 0 0 200px;
-}
 .home-container .home-form input[type=text],
 .home-container .home-form input[type=submit] {
   border: none;
@@ -203,7 +200,7 @@ footer .footer-right .footer-lang a:last-child {
   align-items: flex-start;
   flex-direction: column;
   color: #fff;
-  padding: 0 200px 35px;
+  padding: 200px 200px 35px;
   margin: 200px 0 0 0;
 }
 .home-container .home-info h1 {
@@ -218,14 +215,14 @@ footer .footer-right .footer-lang a:last-child {
 
 /* end home */
 /* privacy policy */
-.privacy-container,
+.ppolicy-container,
 .cpolicy-container {
   height: 100%;
   padding: 25px 200px 35px 200px;
 }
-.privacy-container h1,
-.privacy-container h2,
-.privacy-container h3,
+.ppolicy-container h1,
+.ppolicy-container h2,
+.ppolicy-container h3,
 .cpolicy-container h1,
 .cpolicy-container h2,
 .cpolicy-container h3 {
@@ -234,28 +231,28 @@ footer .footer-right .footer-lang a:last-child {
   color: #fff;
   padding: 0 0 25px;
 }
-.privacy-container h2,
+.ppolicy-container h2,
 .cpolicy-container h2 {
   font-size: 32px;
   padding: 25px 0 15px;
 }
-.privacy-container h3,
+.ppolicy-container h3,
 .cpolicy-container h3 {
   font-size: 22px;
   padding: 25px 0 15px;
 }
-.privacy-container p,
+.ppolicy-container p,
 .cpolicy-container p {
   font-size: 22px;
   font-weight: 400;
   color: #9f9fa7;
   padding: 10px 0;
 }
-.privacy-container ul,
+.ppolicy-container ul,
 .cpolicy-container ul {
   margin: 25px 0;
 }
-.privacy-container ul li,
+.ppolicy-container ul li,
 .cpolicy-container ul li {
   font-size: 22px;
   color: #9f9fa7;
@@ -314,4 +311,72 @@ footer .footer-right .footer-lang a:last-child {
   padding: 0 0 125px;
 }
 
-/* end 404 *//*# sourceMappingURL=app.css.map */
+/* end 404 */
+/* mobile */
+@media (max-width: 854px) {
+  header a {
+    padding: 0 0 0 35px;
+  }
+
+  footer {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 15px 35px;
+  }
+  footer .footer-left {
+    padding: 0 0 15px;
+  }
+
+  .c-consent {
+    height: 250px;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35px;
+  }
+
+  .home-container {
+    padding: 100px 0 0 0;
+  }
+  .home-container .home-desc p {
+    font-size: 18px;
+  }
+  .home-container .home-form {
+    margin: 0;
+    padding: 0 0 0 35px;
+  }
+  .home-container .home-form input[type=text],
+.home-container .home-form input[type=submit] {
+    font-size: 18px;
+  }
+  .home-container .home-form input[type=text] {
+    width: 50%;
+  }
+  .home-container .home-form input[type=submit] {
+    padding: 5px;
+    margin: 0 0 0 10px;
+  }
+  .home-container .home-result {
+    padding: 5px 0;
+  }
+  .home-container .home-result p,
+.home-container .home-result svg {
+    padding: 0 10px;
+    font-size: 18px;
+  }
+  .home-container .home-info {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0 35px 35px;
+  }
+
+  .ppolicy-container,
+.cpolicy-container {
+    padding: 15px 35px 25px 35px;
+  }
+}
+/* end mobile *//*# sourceMappingURL=app.css.map */

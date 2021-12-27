@@ -1,6 +1,6 @@
 @extends("master") @section("title") {{ __("Privacy Policy") }} @endsection
 @section("content")
-<div class="privacy-container">
+<div class="ppolicy-container">
     <h1>{{ __("Privacy Policy") }}</h1>
     <p>
         {{
