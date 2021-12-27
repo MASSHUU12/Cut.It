@@ -9,7 +9,7 @@
         <form action="/shorten" method="post">
             @csrf
             <input
-                type="text"
+                type="url"
                 name="url"
                 placeholder="{{ __('Type your link here') }}..."
                 maxlength="255"
@@ -21,12 +21,16 @@
 
     @if (session("status") == "Shortened successfully")
     <div class="home-result">
-        <p id="shortened-link">{{ session("url") }}</p>
-        <span
-            class="iconify"
-            data-icon="ant-design:copy-filled"
-            id="copy-link"
-        ></span>
+        <div class="home-result-main">
+            <p id="shortened-link">{{ session("url") }}</p>
+            <span
+                class="iconify"
+                data-icon="ant-design:copy-filled"
+                id="copy-link"
+            ></span>
+        </div>
+        <p id="qr-show">Show QR code</p>
+        <img id="qr-qr" src="{{ session('qr') }}" alt="Your QR code" />
     </div>
     @elseif (session("status") == "Invalid URL")
     <div class="home-result">
@@ -39,7 +43,7 @@
         <p>
             {{
                 __(
-                    "For a link to be shortened, you must provide it in the correct form. The site accepts links like: https://example.com or example.com."
+                    "For a link to be shortened, you must provide it in the correct form. The site accepts links like: https://example.com, http://example.com or ftp://example.com."
                 )
             }}
         </p>
@@ -62,4 +66,5 @@
 </div>
 @endsection @section("scripts")
 <script src="{{ asset('js/copyShortenedLink.js') }}"></script>
+<script src="{{ asset('js/manageQRCodes.js') }}"></script>
 @endsection

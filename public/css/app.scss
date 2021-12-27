@@ -176,7 +176,7 @@ footer {
     }
 
     .home-form {
-        input[type="text"],
+        input[type="url"],
         input[type="submit"] {
             border: none;
             border-radius: $p-xs;
@@ -200,27 +200,48 @@ footer {
     }
 
     .home-result {
-        background-color: $color-fourth;
-        border-radius: $p-xs;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        flex-direction: row;
-        margin: $p-b 0 0 0;
-        padding: $p-xs $p-m;
 
-        p {
-            padding: 0 $p-s 0 0;
-        }
-
-        p,
-        svg {
-            color: $color-white;
-            font-size: $fs-r;
-        }
-
-        svg {
+        #qr-show {
+            color: $color-second;
+            padding: $p-s 0 0;
             cursor: pointer;
+        }
+
+        #qr-show:hover {
+            color: $color-third;
+        }
+
+        #qr-qr {
+            display: none;
+            cursor: pointer;
+        }
+
+        .home-result-main {
+            background-color: $color-fourth;
+            border-radius: $p-xs;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin: $p-b 0 0 0;
+            padding: $p-xs $p-m;
+
+            p {
+                padding: 0 $p-s 0 0;
+            }
+
+            p,
+            svg {
+                color: $color-white;
+                font-size: $fs-r;
+            }
+
+            svg {
+                cursor: pointer;
+            }
         }
     }
 
@@ -394,7 +415,7 @@ footer {
             margin: 0;
             padding: 0 0 0 $p-b;
 
-            input[type="text"],
+            input[type="url"],
             input[type="submit"] {
                 font-size: $fs-s;
             }
