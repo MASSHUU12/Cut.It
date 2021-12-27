@@ -29,7 +29,7 @@
                 id="copy-link"
             ></span>
         </div>
-        <p id="qr-show">Show QR code</p>
+        <p id="qr-show">{{ __("Show QR code") }}</p>
         <img id="qr-qr" src="{{ session('qr') }}" alt="Your QR code" />
     </div>
     @elseif (session("status") == "Invalid URL")

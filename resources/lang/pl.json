@@ -8,6 +8,7 @@
     "Most link shorteners do too much.": "Większość skracaczy linków robi zbyt wiele.",
     "This one just makes your links shorter.": "Ten po prostu sprawia, że Twoje linki są krótsze.",
     "Type your link here": "Wpisz link tutaj",
+    "Show QR code": "Pokaż kod QR",
     "How does it work?": "Jak to działa?",
     "For a link to be shortened, you must provide it in the correct form. The site accepts links like: https://example.com, http://example.com or ftp://example.com.": "Aby link został skrócony, musisz podać go w odpowiedniej formie. Strona akceptuje linki typu: https://example.com, http://example.com lub ftp://example.com.",
     "When you click the Cut.It button, your link is saved in the database, and shortened. The shortened link will be deleted from our database if it is not used at least once during 30 days. The counter resets after each use of the link.": "W momencie, gdy klikniesz przycisk CutIt, twój link zostaje zapisany do bazy danych, oraz skrócony. Skrócony link zostanie usunięty z naszej bazy danych, gdy nie zostanie użyty choć raz przez 30 dni. Licznik resetuje się po każdym użyciu linku.",
