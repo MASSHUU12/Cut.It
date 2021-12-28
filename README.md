@@ -12,9 +12,9 @@
 
 ## General Information
 
-#### A simple link shortener created using PHP and MariaDB available in English and Polish.
+A simple link shortener created using PHP and MariaDB available in English and Polish.
 
-#### Most link shorteners offer too many features, most are hidden behind a payment wall or are just unnecessary. People generally expect a straightforward action and a concrete result of simply shortening a link and that's what my site does, optionally allowing you to generate a QR code.
+Most link shorteners offer too many features, most are hidden behind a payment wall or are just unnecessary. People generally expect a straightforward action and a concrete result of simply shortening a link and that's what my site does, optionally allowing you to generate a QR code.
 
 <br />
 
@@ -32,13 +32,10 @@
 
 ## Setup
 
-#### To run this site locally, first clone this repository.
-
-#### Next, create a database named 'shortened' and make sure you have all the [technologies](#technologies).
-
-#### To make sure everything works edit the php.ini file, find the line 'extension=gd and remove '.
-
-#### Now use the following commands on Windows (on MacOs/Linux use the equivalent of these commands):
+To run this site locally, first clone this repository.
+Next, create a database named 'shortened' and make sure you have all the [technologies](#technologies).
+To make sure everything works edit the php.ini file, find the line 'extension=gd and remove '.
+Now use the following commands on Windows (on MacOs/Linux use the equivalent of these commands):
 
 ```
 $ cd .\urlShortener\
@@ -48,8 +45,7 @@ $ php artisan serve
 $ php artisan schedule:work
 ```
 
-#### Now the page will be available in the browser at 127.0.0.1:8000, if you want it to be available across the LAN, use:
-
+Now the page will be available in the browser at 127.0.0.1:8000, if you want it to be available across the LAN, use:
 
 ```
 // in place of [IP] enter the current IP address of the computer, e.g. 192.168.1.101
