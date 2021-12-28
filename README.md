@@ -1,66 +1,85 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Cut.It
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Table of contents
 
-## About Laravel
+-   [General Information](#general-information)
+-   [Technologies](#technologies)
+-   [Setup](#setup)
+-   [Screenshots](#screenshots)
+-   [License](#license)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<br />
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## General Information
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### A simple link shortener created using PHP and MariaDB available in English and Polish.
 
-## Learning Laravel
+#### Most link shorteners offer too many features, most are hidden behind a payment wall or are just unnecessary. People generally expect a straightforward action and a concrete result of simply shortening a link and that's what my site does, optionally allowing you to generate a QR code.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<br />
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Technologies
 
-## Laravel Sponsors
+-   PHP: ^7.3|^8.0
+-   chillerlan/php-qrcode: ^4.3
+-   Laravel: ^8.65
+-   MariaDB: ^10.4.20
+-   Composer
+-   SCSS
+-   jQuery 3.6.0
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<br />
 
-### Premium Partners
+## Setup
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+#### To run this site locally, first clone this repository.
 
-## Contributing
+#### Next, create a database named 'shortened' and make sure you have all the [technologies](#technologies).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### To make sure everything works edit the php.ini file, find the line 'extension=gd and remove '.
 
-## Code of Conduct
+#### Now use the following commands on Windows (on MacOs/Linux use the equivalent of these commands):
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<br />
 
-## Security Vulnerabilities
+```
+$ cd .\urlShortener\
+$ composer install
+$ php artisan migrate
+$ php artisan serve
+$ php artisan schedule:work
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<br />
+
+#### Now the page will be available in the browser at 127.0.0.1:8000, if you want it to be available across the LAN, use:
+
+<br />
+
+```
+// in place of [IP] enter the current IP address of the computer, e.g. 192.168.1.101
+
+$ php artisan serve --host=[IP]
+```
+
+<br />
+
+## Screenshots
+
+<br />
+
+#### Homepage
+
+![Homepage](https://user-images.githubusercontent.com/61974579/147574153-2e77b14c-1b9a-4677-a4e2-5b1fc66ef909.jpg)
+
+<br />
+
+#### Homepage with shortened URL and generated QR code
+
+![Homepage with result](https://user-images.githubusercontent.com/61974579/147574777-d39ca674-aef9-46d1-a770-cefadd384ee0.jpg)
+
+<br />
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### This project is available under the
