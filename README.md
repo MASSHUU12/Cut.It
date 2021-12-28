@@ -40,8 +40,6 @@
 
 #### Now use the following commands on Windows (on MacOs/Linux use the equivalent of these commands):
 
-<br />
-
 ```
 $ cd .\urlShortener\
 $ composer install
@@ -50,11 +48,8 @@ $ php artisan serve
 $ php artisan schedule:work
 ```
 
-<br />
-
 #### Now the page will be available in the browser at 127.0.0.1:8000, if you want it to be available across the LAN, use:
 
-<br />
 
 ```
 // in place of [IP] enter the current IP address of the computer, e.g. 192.168.1.101
@@ -82,4 +77,4 @@ $ php artisan serve --host=[IP]
 
 ## License
 
-#### This project is available under the
+#### This project is licensed under the terms of the GNU AGPLv3 license.
