@@ -6,7 +6,7 @@
 -   [Technologies](#technologies)
 -   [Setup](#setup)
 -   [Screenshots](#screenshots)
--   [License](#license)
+-   [Additional information](#additional-information)
 
 <br />
 
@@ -75,6 +75,5 @@ $ php artisan serve --host=[IP]
 
 <br />
 
-## License
-
-#### This project is licensed under the terms of the GNU AGPLv3 license.
+## Additional information
+This project is made available for review by potential employers as a result no one may reproduce, distribute, or create derivative works from this repository.
