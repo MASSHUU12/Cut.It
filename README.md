@@ -14,7 +14,7 @@
 
 A simple link shortener created using PHP and MariaDB available in English and Polish.
 
-Most link shorteners offer too many features, most are hidden behind a payment wall or are just unnecessary. People generally expect a straightforward action and a concrete result of simply shortening a link and that's what my site does, optionally allowing you to generate a QR code.
+Most link shorteners offer too many features, most are hidden behind a pay wall or are just unnecessary. People generally expect a straightforward action and a concrete result of simply shortening a link and that's what my site does, optionally allowing you to generate a QR code.
 
 <br />
 
@@ -33,8 +33,11 @@ Most link shorteners offer too many features, most are hidden behind a payment w
 ## Setup
 
 To run this site locally, first clone this repository.
+
 Next, create a database named 'shortened' and make sure you have all the [technologies](#technologies).
+
 To make sure everything works edit the php.ini file, find the line 'extension=gd and remove '.
+
 Now use the following commands on Windows (on MacOs/Linux use the equivalent of these commands):
 
 ```
