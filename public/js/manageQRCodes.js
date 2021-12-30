@@ -1,6 +1,7 @@
 let locale = $("html").attr("lang");
 let seen = false;
 
+// Hides or shows QR code
 $("#qr-show").click(() => {
     if (locale == "en")
         seen
@@ -14,6 +15,7 @@ $("#qr-show").click(() => {
     $("#qr-qr").toggle(200);
 });
 
+// When you click on the QR code, it downloads
 $("#qr-qr").click(() => {
     const link = document.createElement("a");
     link.href = $("#qr-qr").attr("src");

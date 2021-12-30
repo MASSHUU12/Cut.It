@@ -7,6 +7,7 @@ $("#c-btn").click(() => {
     $("#c-window").fadeOut(200);
 });
 
+// A function to search for a cookie and return its contents
 function getCookie(cname) {
     let name = cname + "=";
     let ca = decodeURIComponent(document.cookie).split(";");

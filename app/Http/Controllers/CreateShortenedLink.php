@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use chillerlan\QRCode\{QRCode, QROptions};
 
-//require_once('../../../vendor/autoload.php');
-
 class CreateShortenedLink extends Controller
 {
     public function validateUrl()
@@ -15,11 +13,11 @@ class CreateShortenedLink extends Controller
         $url = strtolower($data["url"]);
 
         if (filter_var($data["url"], FILTER_VALIDATE_URL)) {
-            // shortening url using 8 bit crc32 hash
-            // and uploading it to database
+            // Shortening url using 8 bit crc32 hash
             $s = hash('crc32', $url);
 
-            //check if duplicate
+            // Check if it is a duplicate,
+            // if yes update its date, otherwise send to database
             $result = DB::select('select original_link from shortened where original_link = :original_link', ['original_link' => $url]);
             if (sizeof($result) == 0)
                 DB::insert('insert into shortened (original_link, shortened_link, created_at, last_used) values (?, ?, ?, ?)', [$url, $s, now(), now()]);
@@ -31,6 +29,7 @@ class CreateShortenedLink extends Controller
             return redirect('/')->with('status', 'Invalid URL');
     }
 
+    // QR code generation
     public function createQR($url)
     {
         $options = new QROptions(
