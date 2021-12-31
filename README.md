@@ -6,7 +6,7 @@
 -   [Technologies](#technologies)
 -   [Setup](#setup)
 -   [Screenshots](#screenshots)
--   [Additional information](#additional-information)
+-   [License](#license)
 
 <br />
 
@@ -74,5 +74,5 @@ $ php artisan serve --host=[IP]
 
 <br />
 
-## Additional information
-This project is made available for review by potential employers as a result no one may reproduce, distribute, or create derivative works from this repository.
+## License
+All rights reserved
