@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
+use App\Models\Link;
 use chillerlan\QRCode\{QRCode, QROptions};
 
 class CreateShortenedLink extends Controller
@@ -18,11 +18,16 @@ class CreateShortenedLink extends Controller
 
             // Check if it is a duplicate,
             // if yes update its date, otherwise send to database
-            $result = DB::select('select original_link from shortened where original_link = :original_link', ['original_link' => $url]);
-            if (sizeof($result) == 0)
-                DB::insert('insert into shortened (original_link, shortened_link, created_at, last_used) values (?, ?, ?, ?)', [$url, $s, now(), now()]);
+            $result = Link::where('original_link', $url)->first();
+
+            if ($result == "")
+                Link::create([
+                    'original_link' => $url,
+                    'shortened_link' => $s,
+                    'last_used' => now(),
+                ]);
             else
-                DB::update('update shortened set last_used = ? where original_link = ?', [now(), $url]); // if duplicate just update last_used
+                Link::where('original_link', $url)->update(['last_used' => now()]); // if duplicate just update last_used
 
             return redirect('/')->with('status', 'Shortened successfully')->with('qr', $this->createQR($url))->with('url', $_SERVER['HTTP_HOST'] . '/' . $s);
         } else
