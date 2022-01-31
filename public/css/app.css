@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap);
 * {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -400,4 +400,4 @@ footer .footer-right .footer-lang a:last-child {
     padding: 15px 35px 25px 35px;
   }
 }
-/* end mobile *//*# sourceMappingURL=app.css.map */
+/* end mobile */
