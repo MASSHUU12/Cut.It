@@ -1,4 +1,4 @@
 $("#copy-link").click(() => {
-    $("#shortened-link").select();
-    navigator.clipboard.writeText($("#shortened-link").text());
+    let temp = $("<input>").val($("#shortened-link").text()).select();
+    navigator.clipboard.writeText(temp.val());
 });

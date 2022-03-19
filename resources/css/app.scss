@@ -228,6 +228,7 @@ footer {
             flex-direction: row;
             margin: $p-b 0 0 0;
             padding: $p-xs $p-m;
+            cursor: pointer;
 
             p {
                 padding: 0 $p-s 0 0;
@@ -237,10 +238,6 @@ footer {
             svg {
                 color: $color-white;
                 font-size: $fs-r;
-            }
-
-            svg {
-                cursor: pointer;
             }
         }
     }

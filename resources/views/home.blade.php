@@ -21,13 +21,9 @@
 
     @if (session("status") == "Shortened successfully")
     <div class="home-result">
-        <div class="home-result-main">
+        <div class="home-result-main" id="copy-link">
             <p id="shortened-link">{{ session("url") }}</p>
-            <span
-                class="iconify"
-                data-icon="ant-design:copy-filled"
-                id="copy-link"
-            ></span>
+            <span class="iconify" data-icon="ant-design:copy-filled"></span>
         </div>
         <p id="qr-show">{{ __("Show QR code") }}</p>
         <img id="qr-qr" src="{{ session('qr') }}" alt="Your QR code" />

@@ -202,6 +202,7 @@ footer .footer-right .footer-lang a:last-child {
   flex-direction: row;
   margin: 35px 0 0 0;
   padding: 5px 25px;
+  cursor: pointer;
 }
 .home-container .home-result .home-result-main p {
   padding: 0 10px 0 0;
@@ -210,9 +211,6 @@ footer .footer-right .footer-lang a:last-child {
 .home-container .home-result .home-result-main svg {
   color: #fff;
   font-size: 22px;
-}
-.home-container .home-result .home-result-main svg {
-  cursor: pointer;
 }
 .home-container .home-info {
   height: 100%;

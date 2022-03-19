@@ -4,8 +4,8 @@ var __webpack_exports__ = {};
   !*** ./resources/js/copyShortenedLink.js ***!
   \*******************************************/
 $("#copy-link").click(function () {
-  $("#shortened-link").select();
-  navigator.clipboard.writeText($("#shortened-link").text());
+  var temp = $("<input>").val($("#shortened-link").text()).select();
+  navigator.clipboard.writeText(temp.val());
 });
 /******/ })()
 ;
