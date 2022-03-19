@@ -373,7 +373,7 @@ footer .footer-right .footer-lang a:last-child {
 .home-container .home-form input[type=submit] {
     font-size: 18px;
   }
-  .home-container .home-form input[type=text] {
+  .home-container .home-form input[type=url] {
     width: 50%;
   }
   .home-container .home-form input[type=submit] {

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateShortenedLink;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\RedirectFromShortened;
 
 /*
@@ -16,12 +17,7 @@ use App\Http\Controllers\RedirectFromShortened;
 */
 
 // Route for locale change
-Route::get('language/{locale}', function ($locale) {
-    app()->setLocale($locale);
-    session()->put('locale', $locale);
-
-    return redirect()->back();
-});
+Route::get('language/{locale}', [LocaleController::class, "main"]);
 
 
 // Home

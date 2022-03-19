@@ -32,7 +32,7 @@
             <div class="footer-right">
                 <h1>{{ __("Love what I do?") }}</h1>
                 <p>
-                    {{ __("Please, consider buying me a") }}
+                    {{ __("Consider buying me a") }}
                     <a
                         href="https://www.paypal.com/donate/?hosted_button_id=KWJ7PR5MACDJ8"
                         target="_blank"

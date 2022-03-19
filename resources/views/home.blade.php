@@ -11,7 +11,7 @@
             <input
                 type="url"
                 name="url"
-                placeholder="{{ __('Type your link here') }}..."
+                placeholder="{{ __('Type link here') }}..."
                 maxlength="255"
                 required
             />
@@ -57,8 +57,7 @@
         <p>
             {{
                 __(
-                    "Thanks to this solution our database will not be clogged with unused
-            links."
+                    "Thanks to this solution our database will not be clogged with unused links."
                 )
             }}
         </p>

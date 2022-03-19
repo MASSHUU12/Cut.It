@@ -29,7 +29,7 @@ class CreateShortenedLink extends Controller
             else
                 Link::where('original_link', $url)->update(['last_used' => now()]); // if duplicate just update last_used
 
-            return redirect('/')->with('status', 'Shortened successfully')->with('qr', $this->createQR($url))->with('url', $_SERVER['HTTP_HOST'] . '/' . $s);
+            return redirect('/')->with('status', 'Shortened successfully')->with('qr', $this->createQR($_SERVER['HTTP_HOST'] . '/' . $s))->with('url', $_SERVER['HTTP_HOST'] . '/' . $s);
         } else
             return redirect('/')->with('status', 'Invalid URL');
     }
