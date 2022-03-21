@@ -219,6 +219,14 @@ footer {
             cursor: pointer;
         }
 
+        #home-result-info {
+            color: $color-white;
+            background-color: $color-fourth;
+            padding: $p-xs $p-s;
+            border-radius: $p-xs;
+            margin: $p-m 0 0 0;
+        }
+
         .home-result-main {
             background-color: $color-fourth;
             border-radius: $p-xs;

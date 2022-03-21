@@ -30,7 +30,7 @@
     </div>
     @elseif (session("status") == "Invalid URL")
     <div class="home-result">
-        <p>{{ session("status") }}</p>
+        <p id="home-result-info">{{ session("status") }}</p>
     </div>
     @endif
 

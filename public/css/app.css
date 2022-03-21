@@ -193,6 +193,13 @@ footer .footer-right .footer-lang a:last-child {
   display: none;
   cursor: pointer;
 }
+.home-container .home-result #home-result-info {
+  color: #fff;
+  background-color: #5d8aa8;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 25px 0 0 0;
+}
 .home-container .home-result .home-result-main {
   background-color: #5d8aa8;
   border-radius: 5px;
