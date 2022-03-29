@@ -36,7 +36,7 @@ Route::get('/cookie', function () {
 });
 
 // Route for URL processing and sending it to database
-Route::post('/shorten', [CreateShortenedLink::class, "validateUrl"]);
+Route::post('/shorten', [CreateShortenedLink::class, "shortenForWeb"]);
 
 // Redirect from shortened
 Route::get('/{url}', [RedirectFromShortened::class, "redirectFromShortened"]);

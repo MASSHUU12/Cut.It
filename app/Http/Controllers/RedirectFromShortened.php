@@ -6,21 +6,33 @@ use App\Models\Link;
 
 class RedirectFromShortened extends Controller
 {
+    public function getLink($url)
+    {
+        $result = Link::where('shortened_link', $url)->first();
+
+        //If the database did not return the address,
+        //return false, otherwise return original link
+        if (empty($result->original_link)) return false;
+        else {
+            Link::where('shortened_link', $url)->last_used = now();
+            return $result->original_link;
+        }
+    }
+
     public function redirectFromShortened()
     {
         $url = ltrim("$_SERVER[REQUEST_URI]", "/");
+        $result = $this->getLink($url);
 
-        // Checks if the link is a shortened link length, thus reducing the number of database queries
-        if (strlen($url) < 8 || strlen($url) > 8) abort(404);
+        if (!$result) abort(404);
+        return redirect($result);
+    }
 
-        $result = Link::where('shortened_link', $url)->first();
+    public function redirectForApi($link)
+    {
+        $result = $this->getLink($link);
 
-        // If the database did not return the address,
-        // move the user to the error page, otherwise move to the destination page
-        if (strlen($result->original_link) <= 8) abort(404);
-        else {
-            Link::where('shortened_link', $url)->last_used = now();
-            return redirect($result->original_link);
-        }
+        if (!$result) return ["message" => "There is no such link"];
+        else return ["message" => $result];
     }
 }

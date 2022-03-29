@@ -4,17 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Link;
 use chillerlan\QRCode\{QRCode, QROptions};
+use Illuminate\Http\Request;
 
 class CreateShortenedLink extends Controller
 {
-    public function validateUrl()
+    public function validateLink($link)
     {
-        $data = request();
-        $url = strtolower($data["url"]);
+        $url = strtolower($link);
 
-        if (filter_var($data["url"], FILTER_VALIDATE_URL)) {
+        if (filter_var($url, FILTER_VALIDATE_URL)) {
             // Shortening url using 8 bit crc32 hash
-            $s = hash('crc32', $url);
+            $shortened = hash('crc32', $url);
 
             // Check if it is a duplicate,
             // if yes update its date, otherwise send to database
@@ -23,14 +23,29 @@ class CreateShortenedLink extends Controller
             if ($result == "")
                 Link::create([
                     'original_link' => $url,
-                    'shortened_link' => $s,
+                    'shortened_link' => $shortened,
                     'last_used' => now(),
                 ]);
             else
                 Link::where('original_link', $url)->update(['last_used' => now()]); // if duplicate just update last_used
-            return redirect('/')->with(['status' => 'Shortened successfully', 'qr' => $this->createQR($_SERVER['HTTP_HOST'] . '/' . $s), 'url' => $_SERVER['HTTP_HOST'] . '/' . $s]);
-        } else
-            return redirect('/')->with('status', 'Invalid URL');
+            return ["message" => $_SERVER['HTTP_HOST'] . '/' . $shortened, "qr" => $this->createQR($_SERVER['HTTP_HOST'] . '/' . $shortened)];
+        } else return false;
+    }
+
+    public function shortenForWeb(Request $request)
+    {
+        $result = $this->validateLink($request->url);
+
+        if (!$result) return redirect('/')->with('status', 'Invalid URL');
+        else return redirect('/')->with(['status' => 'Shortened successfully', 'qr' => $result["qr"], 'url' => $result["message"]]);
+    }
+
+    public function shortenForApi(Request $request)
+    {
+        $result = $this->validateLink($request->link);
+
+        if (!$result) return ["mesage" => "Invalid link"];
+        else return $result;
     }
 
     // QR code generator

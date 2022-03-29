@@ -2,11 +2,18 @@
 
 ## Table of contents
 
--   [General Information](#general-information)
--   [Technologies](#technologies)
--   [Setup](#setup)
--   [Screenshots](#screenshots)
--   [License](#license)
+- [Cut.It](#cutit)
+  - [Table of contents](#table-of-contents)
+  - [General Information](#general-information)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [API](#api)
+    - [GET: /api/destination/{shortened link}](#get-apidestinationshortened-link)
+    - [POST: /api/shorten](#post-apishorten)
+  - [Screenshots](#screenshots)
+      - [Homepage](#homepage)
+      - [Homepage with shortened URL and generated QR code](#homepage-with-shortened-url-and-generated-qr-code)
+  - [License](#license)
 
 <br />
 
@@ -15,6 +22,8 @@
 A simple link shortener created using PHP and MariaDB available in English and Polish.
 
 Most link shorteners offer too many features, most are hidden behind a pay wall or are just unnecessary. People generally expect a straightforward action and a concrete result of simply shortening a link and that's what my site does, optionally allowing you to generate a QR code.
+
+The site also offers an API, more information [here](#api).
 
 <br />
 
@@ -58,6 +67,75 @@ $ php artisan serve --host=[IP]
 
 <br />
 
+## API
+
+### GET: /api/destination/{shortened link}
+
+<br />
+
+For example: /api/destination/f64d226b
+
+<br />
+
+Example server response:
+
+```
+{
+    "message": "https://duckduckgo.com"
+}
+```
+
+Or in the case of an error:
+
+```
+{
+    "message": "There is no such link"
+}
+```
+
+<br />
+
+### POST: /api/shorten
+
+Example config:
+
+```js
+var config = {
+    method: "post",
+    url: "http://192.168.1.3:8000/api/shorten",
+    headers: {
+        Accept: "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
+    },
+    data: { link: "https://duckduckgo.com" },
+};
+```
+
+<br />
+
+For example: /api/destination/f64d226b
+
+<br />
+
+Example server response:
+
+```json
+{
+    "message": "192.168.1.3:8000/f64d226b",
+    "qr": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAIAAACx0UUt...
+}
+```
+
+Or in the case of an error:
+
+```json
+{
+    "message": "Invalid link"
+}
+```
+
+<br />
+
 ## Screenshots
 
 <br />
@@ -75,4 +153,5 @@ $ php artisan serve --host=[IP]
 <br />
 
 ## License
+
 All rights reserved

@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CreateShortenedLink;
+use App\Http\Controllers\RedirectFromShortened;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Get destination of shortened link
+Route::get('/destination/{string}', [RedirectFromShortened::class, "redirectForApi"]);
+
+// Shorten link
+Route::post('/shorten', [CreateShortenedLink::class, "shortenForApi"]);
