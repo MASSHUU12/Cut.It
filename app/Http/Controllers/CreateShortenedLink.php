@@ -42,9 +42,9 @@ class CreateShortenedLink extends Controller
 
     public function shortenForApi(Request $request)
     {
-        $result = $this->validateLink($request->link);
+        $result = $this->validateLink(implode($request->link));
 
-        if (!$result) return ["mesage" => "Invalid link"];
+        if (!$result) return ["message" => "Invalid link"];
         else return $result;
     }
 
