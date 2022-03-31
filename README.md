@@ -79,7 +79,7 @@ For example: /api/destination/f64d226b
 
 Example server response:
 
-```
+```json
 {
     "message": "https://duckduckgo.com"
 }
@@ -87,7 +87,7 @@ Example server response:
 
 Or in the case of an error:
 
-```
+```json
 {
     "message": "There is no such link"
 }
@@ -113,16 +113,12 @@ var config = {
 
 <br />
 
-For example: /api/destination/f64d226b
-
-<br />
-
 Example server response:
 
 ```json
 {
     "message": "192.168.1.3:8000/f64d226b",
-    "qr": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAIAAACx0UUt...
+    "qr": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAIAAACx0UUt..."
 }
 ```
 
